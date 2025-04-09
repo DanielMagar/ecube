@@ -1,0 +1,50 @@
+.movie-details-wrapper {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.movie-details-wrapper .movie-details-page {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.movie-details-wrapper .movie-details-page {
+  display: flex;
+  border: 1px solid #ccc;
+}
+
+.movie-details-wrapper .movie-details-page .movie-img {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+.movie-details-wrapper .movie-details-page .movie-description {
+  width: 80%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start; /* optional: centers text vertically */
+  padding: 20px;
+}
+.movie-details-wrapper .movie-details-page .movie-name-date {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 7rem;
+}
+.movie-duration,
+.movie-rating {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}

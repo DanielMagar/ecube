@@ -1,0 +1,27 @@
+[
+    {
+      "id": "event1",
+      "title": "Rock Concert",
+      "category": "Concert",
+      "location": "Mumbai",
+      "date": "2025-04-12",
+      "image": "https://picsum.photos/seed/concert/300/200"
+    },
+    {
+      "id": "event2",
+      "title": "Drama Play - Hamlet",
+      "category": "Drama",
+      "location": "Delhi",
+      "date": "2025-04-18",
+      "image": "https://picsum.photos/seed/drama/300/200"
+    },
+    {
+      "id": "event3",
+      "title": "Coding Hackathon",
+      "category": "Competition",
+      "location": "Bangalore",
+      "date": "2025-04-20",
+      "image": "https://picsum.photos/seed/hackathon/300/200"
+    }
+  ]
+  
