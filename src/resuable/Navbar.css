@@ -3,10 +3,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  color: white;
 }
 .navbar-wrapper > div{
   display: flex;
   align-items: center;
-  border: 1px solid #ccc;
   padding: 10px 20px;
 }

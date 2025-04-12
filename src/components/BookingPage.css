@@ -1,0 +1,10 @@
+.booking-page{
+    width: 100%;
+}
+.booking-page .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+}

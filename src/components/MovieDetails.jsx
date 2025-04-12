@@ -4,6 +4,7 @@ import { Footer } from "../resuable/Footer";
 import { useParams, useLocation } from "react-router-dom";
 import "./MovieDetails.css";
 import Header from "../resuable/Header";
+import useGoToTicketBooking from "../Hooks/useGoToTicketBooking";
 
 const MovieDetails = ({ movie }) => {
   const { id } = useParams();
@@ -19,6 +20,7 @@ const MovieDetails = ({ movie }) => {
     Runtime,
   } = location.state.movie || {};
   console.log(location);
+  const goToTicketBooking= useGoToTicketBooking();
   return (
     <>
       <Header />
@@ -52,7 +54,7 @@ const MovieDetails = ({ movie }) => {
             <div className="movie-rating">
               <strong>IMDB Rating:</strong> {imdbRating}
             </div>
-            <button type="button" className="btn btn-primary w-25">
+            <button type="button" className="btn btn-primary w-25" onClick={()=> goToTicketBooking(location.state.movie)}>
               Book Now
             </button>
           </div>

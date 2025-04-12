@@ -1,6 +1,5 @@
 import React from "react";
 
-import Latest from "./Latest";
 import Header from "../resuable/Header";
 import Navbar from "../resuable/Navbar";
 import Slider from "../resuable/Slider";

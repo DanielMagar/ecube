@@ -1,20 +1,18 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRecommendedMovies } from "../redux/slices/moviesSlice";
-import { useNavigate } from 'react-router-dom';
+import useGoToMovieDetails from "../Hooks/useGoToMovieDetail";
+import useGoToTicketBooking from "../Hooks/useGoToTicketBooking";
 
 const RecommendedMovies = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
+  const goToMovieDetails = useGoToMovieDetails();
+  const goToTicketBooking= useGoToTicketBooking();
   useEffect(() => {
     dispatch(fetchRecommendedMovies());
   }, [dispatch]);
   const { recommended } = useSelector((state) => state.movies);
-  const goToMovieDetails = (movie) => {
-    navigate(`/movie/${movie?.imdbID}`, {
-      state: { movie }
-    });
-  };
+
   return (
     <div className="container">
       <h1 className="text-center text-2xl font-bold mt-3">Recommended Movies</h1>
@@ -37,7 +35,11 @@ const RecommendedMovies = () => {
             <h5 className="card-title">{movie.Title}</h5>
             <p className="card-text">{movie.Genre}</p>
           </div>
-          <button type="button" style={{ margin: "0 10px 10px 10px"}} className="btn btn-primary">Book</button>
+          <button type="button" style={{ margin: "0 10px 10px 10px"}} onClick={() => {
+              // Navigate to movie details page
+              goToTicketBooking(movie)
+              // Navigate(`/movie/${movie?.imdbID}`);
+            }} className="btn btn-primary">Book</button>
         </div>
       ))}
      
